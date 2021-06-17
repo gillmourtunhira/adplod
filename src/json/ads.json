@@ -1,0 +1,40 @@
+{
+    "ads" : [
+        {
+            "id":1,
+            "title":"Huawei Honor 4X",
+            "price":1200,
+            "description":"The Huawei Honor 4X is a mid-range Android smartphone manufactured by Huawei as part of the Huawei Honor X series. It was released in October 2014, and received generally positive reviews"
+        },
+        {
+            "id":2,
+            "title":"Iphone 12",
+            "price":2400,
+            "description":"The iPhone 12 and iPhone 12 mini are smartphones by Apple Inc. They were presented in a livestream keynote on October 13, 2020. It can be pre-ordered from October 18, 2020. In the run-up most of the features were predicted by many leakers. For the first time, the devices will be delivered without EarPods or charger. It is the successor of the iPhone 11."
+        },
+        {
+            "id":3,
+            "title":"Nokia C20",
+            "price":800,
+            "description":"Nokia C20 Scandinavian design and build-quality means Nokia C20 doesn't just look great, it'll also take life's little knocks. All day battery life¹ lets you do more of what you love even longer - whether it's listen to music or watch videos - while the big screen makes everything look even better."
+        },
+        {
+            "id":4,
+            "title":"One Plus Nord",
+            "price":950,
+            "description":"The OnePlus Nord is an Android-based smartphone manufactured by OnePlus, unveiled on 21 July 2020. It is the first device in the Nord series. It is the first mid-range smartphone from OnePlus since the 2015 OnePlus X. It is available in Europe, India, Hong Kong, and Malaysia"
+        },
+        {
+            "id":5,
+            "title":"Samsung Galaxy A32",
+            "price":500,
+            "description":"The Samsung Galaxy A32 is a mid-range Android-based smartphone developed and manufactured by Samsung Electronics. It serves as the successor to the Galaxy A31. The phone is similar to its predecessor, but features an upgraded 64 MP main camera. The 5G variant features a 48 MP main camera."
+        },
+        {
+            "id":6,
+            "title":"Huawei P40",
+            "price":1200,
+            "description":"Huawei P40 is a line of high-end Android-based smartphones manufactured by Huawei. Unveiled on 26 March 2020, they succeed the Huawei P30 in the company's P series line"
+        }
+    ]
+}
