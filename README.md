@@ -23,4 +23,4 @@ You will also see any lint errors in the console.
 
 ## Disclaimer
 
-**Expect** `run errors' as changes will be constant until final build
+**Expect** `run errors` as changes will be constant until final build
