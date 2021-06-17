@@ -1,4 +1,4 @@
-# AdPlod Project
+# AdPlod
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
 

@@ -39,6 +39,12 @@
         });
     }
 
+    let name = '';
+    // Search ad typed in the input form
+    function filterAds(name){
+        console.log(name)
+    }
+
 
 </script>
 <style lang="scss">
@@ -116,7 +122,8 @@
 </style>
 <div class="ads__container row">
     <div class="search__ad">
-        <input type="text" placeholder="Search here...">
+        <input on:input={filterAds}  bind:value={name}  type="text" placeholder="Search here...">
+        <h4>You search for: {name}</h4>
     </div>
     <div class="ads__wrapper row">
     {#each allAds as ad}
