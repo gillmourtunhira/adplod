@@ -1,13 +1,11 @@
 /* Add CSS styles here! */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap');
+*,html{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
-}
-.heading{
-  width: 100%;
-}
-h1{
-  text-align: center;
-  font-weight: 300;
-  padding: .5em 1em;
 }

@@ -1,4 +1,5 @@
 <script>
+    import SearchWrapper from './SearchWrapper.svelte';
     import ads from '../json/ads.json';
     import phonepic from '../img/nord.jpg';
 
@@ -11,40 +12,21 @@
         const template = document.querySelector('.ads__wrapper');
 
         allAds.forEach(element => {
-            let divWrapperOne = document.createElement('div');
-            divWrapperOne.classList = 'ads__wrapper--one svelte-1f7uzap'
-
-            // Details Div
-            let divDetails = document.createElement('div');
-            let h2Title = document.createElement('h2');
-            let h4Price = document.createElement('h4');
-            let pDesc = document.createElement('p');
-
-            // Add classes
-            divDetails.classList = 'ad__details svelte-1f7uzap';
-            h2Title.classList = 'ad__details--title svelte-1f7uzap';
-            h4Price.classList = 'ad__details--price svelte-1f7uzap';
-            pDesc.classList = 'ad__details--desc svelte-1f7uzap';
-
-            h2Title.innerText = element.title;
-            h4Price.innerText = element.price;
-            pDesc.innerText = element.description;
-            // Append Children
-            divDetails.appendChild(h2Title);
-            divDetails.appendChild(h4Price);
-            divDetails.appendChild(pDesc);
-
-            divWrapperOne.appendChild(divDetails);
-            template.appendChild(divWrapperOne);
+            const adTemplate = `
+            <div class="ads__wrapper--one">
+                <div class="ad__img">
+                    <img src="/dist/img/nord.jpg" alt="Oneplus Nord">
+                </div> 
+                <div class="ad__details">
+                    <h2 class="ad__details--title">${element.title}</h2>
+                    <h4 class="ad__details--price">$${element.price}</h4>
+                    <p class="ad__details--desc">${element.description}</p>
+                </div>
+            </div>
+            `;
+            template.innerHTML += adTemplate;
         });
     }
-
-    let name = '';
-    // Search ad typed in the input form
-    function filterAds(name){
-        console.log(name)
-    }
-
 
 </script>
 <style lang="scss">
@@ -52,20 +34,6 @@
         width: 100%;
         max-width: 1440px;
         margin: 0 auto;
-    }
-    .search__ad{
-        margin: 2em 0;
-        width: 100%;
-        input{
-            width: 100%;
-            height: 3em;
-            padding: .2em 1em;
-            border: none;
-            background-color: rgba(253, 240, 224, 0.733);
-            outline: none;
-            border-radius: 10px;
-            font-size: medium;
-        }
     }
     .ads__wrapper{
         display: grid;
@@ -86,6 +54,10 @@
     }
     .ad__img{
         width: 40%;
+        img{
+            width: 100%;
+            height: auto;
+        }
     }
     .ad__details{
         width: 60%;
@@ -120,11 +92,8 @@
         }
     }
 </style>
+<SearchWrapper/>
 <div class="ads__container row">
-    <div class="search__ad">
-        <input on:input={filterAds}  bind:value={name}  type="text" placeholder="Search here...">
-        <h4>You search for: {name}</h4>
-    </div>
     <div class="ads__wrapper row">
     {#each allAds as ad}
     <div class="ads__wrapper--one">
